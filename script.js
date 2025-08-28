@@ -1,14 +1,18 @@
 // time setting for call history
-let now = new Date();
-let hours = now.getHours();
-let minutes = now.getMinutes().toString().padStart(2, '0');
-let seconds = now.getSeconds().toString().padStart(2, '0');
-hours = hours % 12;
-hours = hours ? hours : 12; 
-hours = hours.toString().padStart(2, '0');
-let am_pm = hours >= 12 ? "PM" : "AM";
-let localTime = `${hours}:${minutes}:${seconds} ${am_pm}`;
-console.log(localTime);
+function getCurrentTime() {
+  let now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes().toString().padStart(2, '0');
+  let seconds = now.getSeconds().toString().padStart(2, '0');
+  
+  let am_pm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  hours = hours.toString().padStart(2, '0');
+
+  return `${hours}:${minutes}:${seconds} ${am_pm}`;
+}
+
 
 // code part
 const love_count1=document.getElementById('love-count1');
@@ -302,7 +306,7 @@ call_1.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_1.innerText+" "+number_1.innerText);
+    alert("📞calling... to "+" "+service_1.innerText+" "+number_1.innerText);
     
 //  tst
 
@@ -312,7 +316,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_1.innerText}</p>
           <p class="text-xs text-gray-500">${number_1.innerText}</p>
          </div>
-          <p class="text-xs text-black ">${localTime}</p>
+          <p class="text-xs text-black ">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
@@ -339,7 +343,7 @@ call_2.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_2.innerText+" "+number_2.innerText);
+    alert("📞calling... to "+" "+service_2.innerText+" "+number_2.innerText);
     
 //  tst
 
@@ -349,7 +353,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_2.innerText}</p>
           <p class="text-xs text-gray-500">${number_2.innerText}</p>
          </div>
-          <p class="text-xs text-black ">${localTime}</p>
+          <p class="text-xs text-black ">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
@@ -377,7 +381,7 @@ call_3.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_3.innerText+" "+number_3.innerText);
+    alert("📞calling... to "+" "+service_3.innerText+" "+number_3.innerText);
     
 //  tst
 
@@ -387,7 +391,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_3.innerText}</p>
           <p class="text-xs text-gray-500">${number_3.innerText}</p>
          </div>
-          <p class="text-xs text-black ">${localTime}</p>
+          <p class="text-xs text-black ">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
@@ -415,7 +419,7 @@ call_4.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_4.innerText+" "+number_4.innerText);
+    alert("📞calling... to "+" "+service_4.innerText+" "+number_4.innerText);
     
 //  tst
 
@@ -425,7 +429,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_4.innerText}</p>
           <p class="text-xs text-gray-500">${number_4.innerText}</p>
          </div>
-          <p class="text-xs text-black ">${localTime}</p>
+          <p class="text-xs text-black ">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
@@ -452,7 +456,7 @@ call_5.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_5.innerText+" "+number_5.innerText);
+    alert("📞calling... to "+" "+service_5.innerText+" "+number_5.innerText);
     
 //  tst
 
@@ -462,7 +466,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_5.innerText}</p>
           <p class="text-xs text-gray-500">${number_5.innerText}</p>
          </div>
-          <p class="text-xs text-black ">${localTime}</p>
+          <p class="text-xs text-black ">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
@@ -490,7 +494,7 @@ call_6.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_6.innerText+" "+number_6.innerText);
+    alert("📞calling... to "+" "+service_6.innerText+" "+number_6.innerText);
     
 //  tst
 
@@ -500,7 +504,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_6.innerText}</p>
           <p class="text-xs text-gray-500">${number_6.innerText}</p>
          </div>
-          <p class="text-xs text-black ">${localTime}</p>
+          <p class="text-xs text-black ">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
@@ -527,7 +531,7 @@ call_7.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_7.innerText+" "+number_7.innerText);
+    alert("📞calling... to "+" "+service_7.innerText+" "+number_7.innerText);
     
 //  tst
 
@@ -537,7 +541,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_7.innerText}</p>
           <p class="text-xs text-gray-500">${number_7.innerText}</p>
          </div>
-          <p class="text-xs text-black ">${localTime}</p>
+          <p class="text-xs text-black ">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
@@ -564,7 +568,7 @@ call_8.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_8.innerText+" "+number_8.innerText);
+    alert("📞calling... to"+" "+service_8.innerText+" "+number_8.innerText);
     
 //  tst
 
@@ -574,7 +578,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_8.innerText}</p>
           <p class="text-xs text-gray-500 ">${number_8.innerText}</p>
          </div>
-          <p class="text-xs  text-black">${localTime}</p>
+          <p class="text-xs  text-black">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
@@ -601,7 +605,7 @@ call_9.addEventListener('click', (e) => {
   if (call_balance >= 20) {
     call_balance -= 20;
     document.getElementById("call-balance").innerText = call_balance; 
-    alert("calling to "+" "+service_9.innerText+" "+number_9.innerText);
+    alert("📞calling... to "+" "+service_9.innerText+" "+number_9.innerText);
     
 //  tst
 
@@ -611,7 +615,7 @@ newDiv.innerHTML=`<div class="border-b pb-1 flex justify-between items-center">
            <p class="text-sm font-semibold text-black">${service_9.innerText}</p>
           <p class="text-xs text-gray-500">${number_9.innerText}</p>
          </div>
-          <p class="text-xs  text-black">${localTime}</p>
+          <p class="text-xs  text-black">${getCurrentTime()}</p>
         </div>`
 
         add_call.appendChild(newDiv)
