@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Service Directory</title>
+  <!-- tailwindcss -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <div class="navbar bg-white shadow px-4">
+    <div class="flex-1">
+      <img src="assets/logo.png" class="h-8 w-8 mr-2" alt="logo">
+      <span class="font-bold text-green-700 leading-tight ">
+        Emergency <br> Service
+      </span>
+    </div>
+
+    <div class="flex-none space-x-3">
+    
+      <div class="flex items-center bg-green-50 px-3 py-1 rounded-full">
+        <span class="mr-1 font-bold text-gray-700" id="love">0</span>
+        <span><img src="./assets/heart.png" alt="" class="w-6"></span>
+      </div>
+      
+      <div class="flex items-center bg-green-50 px-3 py-1 rounded-full">
+        <span class="mr-1 font-bold text-gray-700" id="call-balance">100</span>
+        <span><img src="./assets/coin.png" alt="" class="w-6"></span>
+      </div>
+      
+      <button class="btn btn-success btn-sm rounded-full px-4 text-white bg-green-500"><span id="numbers">0</span> Copy</button>
+    </div>
+  </div>
+  <!-- Govt home Banner logo -->
+  <section class="text-center bg-gradient-to-r from-green-900 to-green-700 text-white py-6">
+    <img src="./assets/logo-dark.png" alt="flag" class="mx-auto h-16 mb-2">
+    <p class="text-sm font-semibold">Government Emergency Services at Your Fingertip – A Project by Government of the People's Republic of Bangladesh</p>
+    <h1 class="text-2xl font-bold text-white">Emergency Service Directory</h1>
+  </section>
+
+  <!-- Main (All Body)-->
+  <main class="container mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+    <!-- Cards -->
+    <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="card bg-white shadow-md p-4">
+        <div class="flex items-start justify-between">
+          <div class="flex space-x-2 flex-col">
+            <img src="assets/emergency.png" alt="emergency" class="h-10 w-10 bg-[#FFE3E2] p-2 rounded-xl">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">National Emergency Number</h2>
+              <p class="text-xs text-gray-500" id="service-1">National Emergency</p>
+            </div>
+          </div>
+          <button class="bg-transparent border-none text-2xl" id="love-count1">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-1">999</p>
+        <span class="badge badge-outline bg-gray-100">All</span>
+        <div class="card-actions justify-center mt-3">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn1"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white" id="call-1"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card bg-white shadow-md p-4">
+        <div class="flex items-start justify-between">
+          <div class="flex space-x-2 flex-col">
+            <img src="assets/police.png" alt="emergency" class="h-10 w-10 bg-[#DFEFFF] p-2 rounded-xl">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">Police Helpline Number</h2>
+              <p class="text-xs text-gray-500" id="service-2">Police</p>
+            </div>
+          </div>
+          <button class="bg-transparent border-none text-2xl" id="love-count2">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-2">999</p>
+        <span class="badge badge-outline bg-gray-100">Police</span>
+        <div class="card-actions justify-center mt-3">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn2"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white" id="call-2"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+<!-- Card 3 -->
+      <div class="card bg-white shadow-md p-4" >
+        <div class="flex items-start justify-between">
+          <div class="flex  space-x-2 flex-col ">
+            <img src="assets/fire-service.png" alt="emergency" class="h-10 w-10 bg-[#FFE3E2] p-2 rounded-xl ">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">Fire Service Number</h2>
+              <p class="text-xs text-gray-500" id="service-3">Fire Service Number</p>
+            </div>
+          </div>
+          <button class=" bg-transparent border-none text-2xl" id="love-count3">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-3">999</p>
+        <span class="badge badge-outline bg-gray-100">Fire</span>
+        <div class="card-actions justify-center mt-3 ">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn3"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white" id="call-3"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+<!--Card 4-->
+      <div class="card bg-white shadow-md p-4" >
+        <div class="flex items-start justify-between">
+          <div class="flex  space-x-2 flex-col ">
+            <img src="assets/ambulance.png" alt="emergency" class="h-10 w-10 bg-[#FFE3E2] p-2 rounded-xl ">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">Ambulance Service</h2>
+              <p class="text-xs text-gray-500" id="service-4">Ambulance Service</p>
+            </div>
+          </div>
+          <button class=" bg-transparent border-none text-2xl" id="love-count4">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-4">1994-999999</p>
+        <span class="badge badge-outline bg-gray-100">Health</span>
+        <div class="card-actions justify-center mt-3 ">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn4"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white" id="call-4"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+<!--  Card 5 -->
+      <div class="card bg-white shadow-md p-4" >
+        <div class="flex items-start justify-between">
+          <div class="flex  space-x-2 flex-col ">
+            <img src="assets/emergency.png" alt="emergency" class="h-10 w-10 bg-[#FFE3E2] p-2 rounded-xl ">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">Women & Child Helpline</h2>
+              <p class="text-xs text-gray-500" id="service-5">Women & Child Helpline</p>
+            </div>
+          </div>
+          <button class=" bg-transparent border-none text-2xl" id="love-count5">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-5">109</p>
+        <span class="badge badge-outline bg-gray-100">Help</span>
+        <div class="card-actions justify-center mt-3 ">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn5"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white " id="call-5"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+<!--  Card 6-->
+      <div class="card bg-white shadow-md p-4" >
+        <div class="flex items-start justify-between">
+          <div class="flex  space-x-2 flex-col ">
+            <img src="assets/fire-service.png" alt="emergency" class="h-10 w-10 bg-[#FFE3E2] p-2 rounded-xl ">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">Anti-Corruption Helpline</h2>
+              <p class="text-xs text-gray-500" id="service-6">Anti-Corruption</p>
+            </div>
+          </div>
+          <button class=" bg-transparent border-none text-2xl" id="love-count6">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-6">106</p>
+        <span class="badge badge-outline bg-gray-100">Govt.</span>
+        <div class="card-actions justify-center mt-3 ">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn6"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white " id="call-6"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+<!--  Card 7 -->
+      <div class="card bg-white shadow-md p-4" >
+        <div class="flex items-start justify-between">
+          <div class="flex  space-x-2 flex-col ">
+            <img src="assets/emergency.png" alt="emergency" class="h-10 w-10 bg-[#FFE3E2] p-2 rounded-xl ">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">Electricity Helpline</h2>
+              <p class="text-xs text-gray-500" id="service-7">Electricity Outage</p>
+            </div>
+          </div>
+          <button class=" bg-transparent border-none text-2xl" id="love-count7">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-7">16216</p>
+        <span class="badge badge-outline bg-gray-100">Electricity</span>
+        <div class="card-actions justify-center mt-3 ">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn7"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white" id="call-7"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+<!-- Card 8-->
+      <div class="card bg-white shadow-md p-4" >
+        <div class="flex items-start justify-between">
+          <div class="flex  space-x-2 flex-col ">
+            <img src="assets/brac.png" alt="emergency" class="h-10 w-10 bg-[#e2f9ff] p-2 rounded-xl ">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">Brac Helpline</h2>
+              <p class="text-xs text-gray-500" id="service-8">Brac</p>
+            </div>
+          </div>
+          <button class=" bg-transparent border-none text-2xl" id="love-count8">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-8">16445</p>
+        <span class="badge badge-outline bg-gray-100">NGO</span>
+        <div class="card-actions justify-center mt-3 ">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn8"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white" id="call-8"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+<!-- Card 9-->
+      <div class="card bg-white shadow-md p-4" >
+        <div class="flex items-start justify-between">
+          <div class="flex  space-x-2 flex-col ">
+            <img src="assets/Bangladesh-Railway.png" alt="emergency" class="h-10 w-10 bg-[#FFE3E2] p-2 rounded-xl ">
+            <div>
+              <h2 class="font-semibold mt-3 text-black">Bangladesh Railway Helpline </h2>
+              <p class="text-xs text-gray-500" id="service-9">Bangladesh Railway</p>
+            </div>
+          </div>
+          <button class=" bg-transparent border-none text-2xl" id="love-count9">♡</button>
+        </div>
+        <p class="text-2xl font-bold my-3 text-black" id="number-9">163</p>
+        <span class="badge badge-outline bg-gray-100">Travel</span>
+        <div class="card-actions justify-center mt-3 ">
+          <button class="btn btn-sm w-28 bg-transparent" id="copy-btn9"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn btn-sm btn-success w-28 bg-green-500 text-white" id="call-9"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call History -->
+    <aside class="lg:col-span-1 card bg-white shadow-md p-4">
+      <div class="flex items-center justify-between mb-2">
+        <h2 class="font-semibold text-black"><i class="fa-solid fa-clock-rotate-left text-gray-400"></i> Call History</h2>
+        <button class="btn btn-sm btn-success w-20 bg-green-500 text-white" id="clear-btn">Clear</button>
+      </div>
+      <div class="overflow-y-auto max-h-96 space-y-3" id="add-call">
+        
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
